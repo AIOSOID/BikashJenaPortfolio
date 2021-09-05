@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Contact</title>
+
+	<script type="text/javascript">
+		//window size
+		var height = window.innerHeight;
+		var width =window.innerWidth;
+
+		//var value
+		//background image size
+		var bimg_width=((width/100)*100).toString()+'px';
+		document.documentElement.style.setProperty('--bimg_width',bimg_width);
+		var bimg_height=((height/100)*100).toString()+'px';
+		document.documentElement.style.setProperty('--bimg_height',bimg_height);
+		//main frame size
+		var mframe_width=((width/100)*90).toString()+'px';
+		document.documentElement.style.setProperty('--mframe_width',mframe_width);
+		var mframe_height=((height/100)*90).toString()+'px';
+		document.documentElement.style.setProperty('--mframe_height',mframe_height);
+		//padding main frame
+		var mframe_lpad=((width/100)*5).toString()+'px';
+		document.documentElement.style.setProperty('--mframe_lpad',mframe_lpad);
+		var mframe_tpad=((height/100)*5).toString()+'px';
+		document.documentElement.style.setProperty('--mframe_tpad',mframe_tpad);
+		//certificate size
+		var cert_width=((width/100)*8).toString()+'px';
+		document.documentElement.style.setProperty('--cert_width',cert_width);
+		var cert_height=((height/100)*10).toString()+'px';
+		document.documentElement.style.setProperty('--cert_height',cert_height);
+		var bcert_width=((width/100)*40).toString()+'px';
+		document.documentElement.style.setProperty('--bcert_width',bcert_width);
+		var bcert_height=((height/100)*40).toString()+'px';
+		document.documentElement.style.setProperty('--bcert_height',bcert_height);
+		var amg_width=((width/100)*18).toString()+'px';
+		document.documentElement.style.setProperty('--amg_width',amg_width);
+		var amg_height=((height/100)*18).toString()+'px';
+		document.documentElement.style.setProperty('--amg_height',amg_height);
+
+		
+		// resizw on reload windows
+		function resizewindows(){
+			//window size
+			var height = window.innerHeight;
+			var width =window.innerWidth;
+
+			//var value
+			//background image size
+			var bimg_width=((width/100)*100).toString()+'px';
+			document.documentElement.style.setProperty('--bimg_width',bimg_width);
+			var bimg_height=((height/100)*100).toString()+'px';
+			document.documentElement.style.setProperty('--bimg_height',bimg_height);
+			//main frame size
+			var mframe_width=((width/100)*90).toString()+'px';
+			document.documentElement.style.setProperty('--mframe_width',mframe_width);
+			var mframe_height=((height/100)*90).toString()+'px';
+			document.documentElement.style.setProperty('--mframe_height',mframe_height);
+			//padding main frame
+			var mframe_lpad=((width/100)*5).toString()+'px';
+			document.documentElement.style.setProperty('--mframe_lpad',mframe_lpad);
+			var mframe_tpad=((height/100)*5).toString()+'px';
+			document.documentElement.style.setProperty('--mframe_tpad',mframe_tpad);
+			//certificate size
+			var cert_width=((width/100)*8).toString()+'px';
+			document.documentElement.style.setProperty('--cert_width',cert_width);
+			var cert_height=((height/100)*10).toString()+'px';
+			document.documentElement.style.setProperty('--cert_height',cert_height);
+			var bcert_width=((width/100)*40).toString()+'px';
+			document.documentElement.style.setProperty('--bcert_width',bcert_width);
+			var bcert_height=((height/100)*40).toString()+'px';
+			document.documentElement.style.setProperty('--bcert_height',bcert_height);
+			var amg_width=((width/100)*18).toString()+'px';
+			document.documentElement.style.setProperty('--amg_width',amg_width);
+			var amg_height=((height/100)*18).toString()+'px';
+			document.documentElement.style.setProperty('--amg_height',amg_height);
+		}
+	</script>
+	<style type="text/css">
+		body{
+			background-repeat: no-repeat;
+			background-size: var(--bimg_width) var(--bimg_height);
+			background-image: url({{url_for('static',filename='home_background.jpg')}});
+		}
+		.main_frame{
+			border-radius: 2%;
+			height: var(--mframe_height);
+			width: var(--mframe_width);
+			box-shadow: 20px 20px 10px black;
+			background-color: white;
+			margin-left: var(--mframe_lpad);
+			margin-top: var(--mframe_tpad);
+			overflow: hidden;
+		}
+		.nav {
+			padding-top: 2%;
+		}
+		 .nav ul {
+      		list-style: none;
+      		text-align: center;
+      		padding: 0;
+      		margin: 0;
+    	}
+    	.nav ul li {
+    		padding-left: 5%;
+    		margin: 0;
+    		display: inline;
+    	}
+    	.nav ul li a {
+    		text-decoration: none;
+    	}
+    	.nav ul li a:hover {
+    		filter: drop-shadow(2px 2px 4px #FC3232);
+    	}
+    	.fbl .fb {
+    		height: 3%;
+    		width: 3%;
+    		position: absolute;
+    		margin-top: 1%;
+    		margin-left: 2%;
+    	}
+    	.fbl .fb:hover {
+    		filter: drop-shadow(2px 2px 4px #464646);
+    	}
+    	.fbl1 .fb1 {
+    		height: 3%;
+    		width: 3%;
+    		position: absolute;
+    		margin-top: 1%;
+    		margin-left: 5.5%;
+    	}
+    	.fbl1 .fb1:hover {
+    		filter: drop-shadow(2px 2px 4px #464646);
+    	}
+    	.cont {
+    		color: white;
+    		padding: 0.5%;
+    		background-color: #490E77;
+    		text-decoration: none;
+    		float: right;
+    		margin-right: 10%;
+    		border-radius: 5%;
+    		margin-top: -2%;
+    	}
+    	.cont:hover {
+    		filter: drop-shadow(2px 2px 4px #464646);
+    	}
+    	.intro {
+    		margin-top: 10%;
+    		margin-left: 5%;
+    	}
+    	.board{
+    		height: 80%;
+    		width: 90%;
+    		background: linear-gradient(45deg, purple, green, blue, gold, orange, red);
+    		margin-top: 3%;
+    		margin-left: 5%;
+    		padding-top: 1.5%;
+    		padding-bottom: 0%;
+    		padding-left: 1%;
+    		padding-right: 1%;
+    		overflow: hidden;
+    	}
+	</style>
+</head>
+<body onresize="resizewindows()">
+	<div class="main_frame">
+		<a href="https://www.facebook.com/aiosoid" class="fbl" target="_blank"><img class="fb" src="{{url_for('static',filename='fb_logo.png')}}"></a>
+		<a href="https://www.instagram.com/aiosoid/?hl=en" class="fbl1" target="_blank"><img class="fb1" src="{{url_for('static',filename='insta.png')}}"></a>
+		<div class="nav">
+      		<ul>
+        		<li class="home"><a href="/" style="color: black;">Home</a></li>
+        		<li class="about"><a href="/about" style="color: black;">About</a></li>
+        		<li class="degn"><a href="/design" style="color: black;">Design/AutoCAD</a></li>
+        		<li class="prog"><a href="/code" style="color: black;">programming/Devlopment</a></li>
+      		</ul>
+    	</div>
+    	<a href="#" class="cont">Contact</a>
+    	<div class="board">
+    		<h1 style="text-align: center;">Contact</h1>
+    		<p style="text-align:center;">Here we will Update Soon.</p>
+    	</div>
+    </div>	
+    	
+
+</body>
+</html>
